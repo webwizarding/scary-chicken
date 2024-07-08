@@ -30,12 +30,13 @@ def create_fake_registry_entries():
             print(f"Failed to create registry entries at {key_path}: {e}")
 
 def create_fake_files():
-    for file_path in config['fake_files']:
+    for file_entry in config['fake_files']:
+        file_path = file_entry['path']
+        content = file_entry['content']
         Path(file_path).parent.mkdir(parents=True, exist_ok=True)
         with open(file_path, 'w') as file:
-            file.write("This is a fake log file for Scary Chicken.")
+            file.write(content)
         print(f"Fake file created at {file_path}.")
-
 
 def simulate_network_traffic():
     while True:
