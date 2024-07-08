@@ -1,0 +1,34 @@
+{
+    "fake_processes": ["csfalconservice.exe", "xagt.exe", "taniumclient.exe", "VBoxService.exe", "vmtoolsd.exe", "vdagent.exe"],
+    "fake_registry_entries": {
+        "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\csfalconservice.exe": {
+            "Debugger": "ntsd -d"
+        },
+        "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\xagt.exe": {
+            "Debugger": "ntsd -d"
+        },
+        "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\taniumclient.exe": {
+            "Debugger": "ntsd -d"
+        },
+        "SOFTWARE\\Oracle\\VirtualBox Guest Additions": {
+            "Version": "6.1.22"
+        },
+        "SOFTWARE\\VMware, Inc.\\VMware Tools": {
+            "Version": "11.2.5"
+        }
+    },
+    "fake_files": [
+        "C:\\Program Files\\CrowdStrike\\Falcon\\logs\\log.txt",
+        "C:\\Program Files\\FireEye\\logs\\scan_results.log",
+        "C:\\Program Files\\Tanium\\TaniumClient\\logs\\log.txt",
+        "C:\\Program Files\\Oracle\\VirtualBox Guest Additions\\VBoxService.log",
+        "C:\\Program Files\\VMware\\VMware Tools\\vmtoolsd.log"
+    ],
+    "network_endpoints": [
+        "http://crowdstrike-updates.com",
+        "http://fireeye-updates.com",
+        "http://tanium-updates.com",
+        "http://oracle-vbox-updates.com",
+        "http://vmware-updates.com"
+    ]
+}
