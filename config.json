@@ -1,5 +1,21 @@
 {
-    "fake_processes": ["csfalconservice.exe", "xagt.exe", "taniumclient.exe", "VBoxService.exe", "vmtoolsd.exe", "vdagent.exe"],
+    "fake_processes": [
+        "csfalconservice.exe",
+        "xagt.exe",
+        "taniumclient.exe",
+        "VBoxService.exe",
+        "vmtoolsd.exe",
+        "vdagent.exe",
+        "fiddler.exe",
+        "joeboxserver.exe",
+        "joeboxcontrol.exe",
+        "wireshark.exe",
+        "ida64.exe",
+        "ollydbg.exe",
+        "pestudio.exe",
+        "x96dbg.exe",
+        "x32dbg.exe"
+    ],
     "fake_registry_entries": {
         "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\csfalconservice.exe": {
             "Debugger": "ntsd -d"
@@ -15,20 +31,78 @@
         },
         "SOFTWARE\\VMware, Inc.\\VMware Tools": {
             "Version": "11.2.5"
+        },
+        "SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters": {
+            "GuestType": "VM"
+        },
+        "SYSTEM\\ControlSet001\\Services\\VBoxMouse": {
+            "DisplayName": "VirtualBox Guest Mouse"
+        },
+        "SYSTEM\\ControlSet001\\Services\\VBoxService": {
+            "DisplayName": "VirtualBox Guest Service"
         }
     },
     "fake_files": [
-        "C:\\Program Files\\CrowdStrike\\Falcon\\logs\\log.txt",
-        "C:\\Program Files\\FireEye\\logs\\scan_results.log",
-        "C:\\Program Files\\Tanium\\TaniumClient\\logs\\log.txt",
-        "C:\\Program Files\\Oracle\\VirtualBox Guest Additions\\VBoxService.log",
-        "C:\\Program Files\\VMware\\VMware Tools\\vmtoolsd.log"
+        {
+            "path": "C:\\Program Files\\CrowdStrike\\Falcon\\logs\\log.txt",
+            "content": "[INFO] 2024-07-08 12:00:00 - Service started\n[INFO] 2024-07-08 12:05:00 - Checking for updates\n[INFO] 2024-07-08 12:10:00 - Update check complete, no updates found"
+        },
+        {
+            "path": "C:\\Program Files\\FireEye\\logs\\scan_results.log",
+            "content": "[INFO] 2024-07-08 12:00:00 - Scan started\n[INFO] 2024-07-08 12:05:00 - Scan in progress\n[INFO] 2024-07-08 12:10:00 - Scan complete, no threats found"
+        },
+        {
+            "path": "C:\\Program Files\\Tanium\\TaniumClient\\logs\\log.txt",
+            "content": "[INFO] 2024-07-08 12:00:00 - Client initialized\n[INFO] 2024-07-08 12:05:00 - Server connection established\n[INFO] 2024-07-08 12:10:00 - Sync complete"
+        },
+        {
+            "path": "C:\\Program Files\\Oracle\\VirtualBox Guest Additions\\VBoxService.log",
+            "content": "[INFO] 2024-07-08 12:00:00 - Service started\n[INFO] 2024-07-08 12:05:00 - Guest additions initialized\n[INFO] 2024-07-08 12:10:00 - Shared folders mounted"
+        },
+        {
+            "path": "C:\\Program Files\\VMware\\VMware Tools\\vmtoolsd.log",
+            "content": "[INFO] 2024-07-08 12:00:00 - VMware Tools service started\n[INFO] 2024-07-08 12:05:00 - Guest operations initialized\n[INFO] 2024-07-08 12:10:00 - VMware Tools version 11.2.5"
+        },
+        {
+            "path": "C:\\Program Files\\Wireshark\\log.txt",
+            "content": "[INFO] 2024-07-08 12:00:00 - Wireshark started\n[INFO] 2024-07-08 12:05:00 - Capturing on interface 'Ethernet'\n[INFO] 2024-07-08 12:10:00 - Capture complete, no packets dropped"
+        },
+        {
+            "path": "C:\\Program Files\\Fiddler\\fiddler.log",
+            "content": "[INFO] 2024-07-08 12:00:00 - Fiddler started\n[INFO] 2024-07-08 12:05:00 - Intercepting traffic\n[INFO] 2024-07-08 12:10:00 - No issues detected"
+        },
+        {
+            "path": "C:\\windows\\system32\\vmGuestLib.dll",
+            "content": ""
+        },
+        {
+            "path": "C:\\windows\\system32\\vm3dgl.dll",
+            "content": ""
+        },
+        {
+            "path": "C:\\windows\\system32\\vboxhook.dll",
+            "content": ""
+        },
+        {
+            "path": "C:\\windows\\system32\\vboxmrxnp.dll",
+            "content": ""
+        },
+        {
+            "path": "C:\\windows\\system32\\vmsrvc.dll",
+            "content": ""
+        },
+        {
+            "path": "C:\\windows\\system32\\drivers\\vmsrvc.sys",
+            "content": ""
+        }
     ],
     "network_endpoints": [
-        "http://crowdstrike-updates.com",
-        "http://fireeye-updates.com",
-        "http://tanium-updates.com",
-        "http://oracle-vbox-updates.com",
-        "http://vmware-updates.com"
+        "http://updates.crowdstrike.com",
+        "http://updates.fireeye.com",
+        "http://updates.tanium.com",
+        "http://updates.virtualbox.org",
+        "http://updates.vmware.com",
+        "http://updates.wireshark.org",
+        "http://updates.fiddler.com"
     ]
 }
