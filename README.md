@@ -36,3 +36,6 @@ https://www.picussecurity.com/resource/virtualization/sandbox-evasion-how-attack
 - [ ] Encrypting code with pyinstaller to make it exe
 - [ ] Fake content injection
 ---
+
+### Repo stats
+![Alt](https://repobeats.axiom.co/api/embed/2632d5d5ac85083a5a63e16770cbde988ed91591.svg "Repobeats analytics image")
