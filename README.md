@@ -34,4 +34,5 @@ https://www.picussecurity.com/resource/virtualization/sandbox-evasion-how-attack
 - [ ] Configure realistic non conflicting processes
 - [ ] Make like libraries with a portion of the functions
 - [ ] Encrypting code with pyinstaller to make it exe
+- [ ] Fake content injection
 ---
