@@ -2,9 +2,15 @@
 
 ---
 
-Scary Chicken is a program designed to use malware defensive techniques to our advantage.
+Scary Chicken is a program designed to use malware defensive techniques to our advantage. 
+
 Modern-day malware holds code that can be vital to the survival of the organization distributing such programs. And so they contain safeguards that include preventing malware reverse engineering and research by preventing installation onto machines that have indicators of tools that would be installed onto a VM or a malware researcher's machine.
+ 
 As a user, we can leverage this to our advantage by creating fake processes, files, fake network indicators, and registry entries to deter malware from even executing the installation.
+
+---
+
+## DISCLAIMER 
 
 This is my attempt at an open source cyber scarecrow (https://www.cyberscarecrow.com/).
 The nature of Cyber Scarecrow is somewhat shady and is not open source.
